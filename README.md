@@ -56,7 +56,7 @@ To run this program on your LEGO PrimeHub, you need to install **Pybricks firmwa
 
 ### 2. Load the Script
 1. In the Pybricks Code editor, create a new project.
-2. Copy and paste the contents of the provided script (`ATUM_tape_collector_control.py`) into the editor.
+2. Copy and paste the contents of the provided script (`ATUM_tape_collector_control.py`) into the editor. Measure your tape reel diameters (including the tape on the reel) and adjust the variables in script.
 3. Click the **Run** button to download and execute the program on your hub.
 4. After loading the script to your hub, it will be acessible without connection to your computer.
 
