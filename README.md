@@ -88,16 +88,6 @@ To run this program on your LEGO PrimeHub, you need to install **Pybricks firmwa
 
 ---
 
-## Internal Functions
-
-| Function | Purpose |
-|-----------|----------|
-| `estimate_radius()` | Estimates changing reel radius as tape wraps. |
-| `wait_for_force_start()` | Waits for the user to press force sensor to start. |
-| `check_force_exit()` | Detects exit condition via force sensor. |
-
----
-
 ## Notes
 
 - The menu system automatically returns after each program finishes.
