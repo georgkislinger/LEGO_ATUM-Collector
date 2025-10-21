@@ -7,7 +7,7 @@ It provides three motor-based control programs for tape movement and winding mec
 
 ## Features
 
-- Interactive menu system using hub buttons or force sensor fallback.
+- Interactive menu system using force sensor to cycle through modes.
 - Three programmable modes:
   1. Collection Mode — Moves tape segments when a red color is detected. Red colored sticker or similar should be attached to the sample holder at an appropriate position.
   2. Tension Mode — To set initial tape tension at constant speed.
@@ -15,7 +15,6 @@ It provides three motor-based control programs for tape movement and winding mec
 - Dynamic display icons for C, T, and R menu entries.
 - Smart tape radius estimation based on reel geometry and gear ratios.
 - Force sensor-based start and exit control.
-- Error fallback for button API issues.
 
 ---
 
@@ -34,11 +33,15 @@ It provides three motor-based control programs for tape movement and winding mec
 
 | Parameter | Description | Default |
 |------------|-------------|----------|
-| `TAPE_THICKNESS` | Thickness of tape layer (mm) | 0.05 |
-| `REEL_START_RADIUS_D` | Starting radius of motor D reel (mm) | 20.5 |
-| `REEL_START_RADIUS_B` | Starting radius of motor B reel (mm) | 29.0 |
-| `GEAR_RATIO_D` | Gear ratio for motor D | 9 |
-| `GEAR_RATIO_B` | Gear ratio for motor B | 3 |
+| `TAPE_THICKNESS` | Thickness of tape layer (mm) | 0.05 |Used to calculate necessary motor movements as tape is spooled from one reel to other|
+| `REEL_START_RADIUS_D` | Starting radius of motor D reel (mm) | 20.5 | Empty (taking-) reel diameter |
+| `REEL_START_RADIUS_B` | Starting radius of motor B reel (mm) | 29.0 | Full (giving-) reel radius|
+| `TAPE_MM` | Amount of tape collected on red event | 10 | Amount of tape used to collect one section |
+| `MOVE_TIME_MS` | Duration of tape collection on red event | 2000 | Duration of motors = ON after red event |
+| `MOVE_DELAY_MS` | Delay of movement after red event | 200 | Delay between red detection and motor start |
+| `GIVING_OVERSHOOT_MM` | Additional tape given by motor b | 0 | Can be used if tape is too tight after few collection event, can be negative to keep tape taut |
+| `GEAR_RATIO_D` | Gear ratio for motor D | 9 | If setup changes, gear ratios can be adjusted |
+| `GEAR_RATIO_B` | Gear ratio for motor B | 3 | If setup changes, gear ratios can be adjusted |
 
 ---
 
@@ -68,6 +71,7 @@ To run this program on your LEGO PrimeHub, you need to install **Pybricks firmwa
 2. Run the program on your PrimeHub.
 3. Use the menu to select a mode:
    - Use the force sensor to cycle/select. Long press (>3s selects subprocess, short press cycles through options)
+   - Use force sensor to exit any mode, e.g. if accidentally selected wrong mode.
 
 ---
 
@@ -75,7 +79,7 @@ To run this program on your LEGO PrimeHub, you need to install **Pybricks firmwa
 
 ### 1. Collection Program
 - Moves tape a defined distance whenever red color is detected.
-- Adjustable parameters for movement time, delay, and overshoot.
+- Adjustable parameters for movement time, delay, and overshoot. (See table with params)
 - Displays event count on the hub. Top two rows indicate ones, rows 3 and 4 indicate tens and last rows indicate hundreds.
 
 ### 2. Tension Program
@@ -103,7 +107,7 @@ Follow these steps to prepare and start the ATUM system:
    Cycle through the menu to **C (Collection Mode)** and confirm by a long press on the force sensor.  
    Let the microtome arm perform a cut and verify that the collector moves the tape after each cut.  
    The appropriate **delay** depends on the sticker position; the **distance and time** to run depend on sectioning speed and blockface size.  
-   To exit **C (Collection Mode)**, restart the hub.
+   To exit **C (Collection Mode)**, restart the hub or press sensor.
 
 3. **Set Reel Parameters**  
    Measure your tape reel diameters and enter the values in the software. Standard values may already work well.  
