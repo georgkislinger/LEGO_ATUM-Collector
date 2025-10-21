@@ -26,7 +26,7 @@ It provides three motor-based control programs for tape movement and winding mec
 | Motor B | B | Counterclockwise direction |
 | Motor D | D | Counterclockwise direction |
 | Color Sensor | F | Detects red markers |
-| Force Sensor | E | Used for start/exit/menu fallback |
+| Force Sensor | E | Used for start/exit/menu |
 
 ---
 
