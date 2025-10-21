@@ -88,7 +88,7 @@ To run this program on your LEGO PrimeHub, you need to install **Pybricks firmwa
 
 ---
 
-## HOW TO OPERATE ATUM
+## How to operate the Auto-Collector
 
 ### Before Starting
 
