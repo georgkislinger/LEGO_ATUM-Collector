@@ -31,9 +31,9 @@ It provides three motor-based control programs for tape movement and winding mec
 
 ## Configuration Parameters
 
-| Parameter | Description | Default |
-|------------|-------------|----------|
-| `TAPE_THICKNESS` | Thickness of tape layer (mm) | 0.05 | Used to calculate necessary motor movements as tape is spooled from one reel to other|
+| Parameter | Description | Default | Explanation |
+|------------|-------------|----------|-----------|
+| `TAPE_THICKNESS` | Thickness of tape layer (mm) | 0.05 | Used to calculate necessary motor movements as tape is spooled from one reel to other |
 | `REEL_START_RADIUS_D` | Starting radius of motor D reel (mm) | 20.5 | Empty (taking-) reel diameter |
 | `REEL_START_RADIUS_B` | Starting radius of motor B reel (mm) | 29.0 | Full (giving-) reel radius|
 | `TAPE_MM` | Amount of tape collected on red event | 10 | Amount of tape used to collect one section |
