@@ -110,9 +110,9 @@ Follow these steps to prepare and start the ATUM system:
    To exit **C (Collection Mode)**, restart the hub or press sensor.
 
 3. **Set Reel Parameters**  
-   Measure your tape reel diameters and enter the values in the software. Standard values may already work well.  
+   Measure your tape reels' diameters from center of each reel to outermost tape layer and enter radius values in the software. Standard values may already work well.  
    If you want to change when or how the collector moves, adjust the **collection distance** and **delay** parameters to better coordinate with your cutting process.  
-   After modifying parameters, reupload the updated script to the hub.
+   After modifying parameters, reupload the updated script to the hub. **Giving_overshoot_mm** can be used to adjust tape tension after collection events.
 
 4. **Insert the Knife and Adjust the Tape Arm**  
    Insert the knife into the ultramicrotome system.  
@@ -134,6 +134,10 @@ Follow these steps to prepare and start the ATUM system:
 ---
 
 ## Troubleshooting
+### Tape loses tension after collection or tension increases
+**Probable causes:**
+1. Radii or Tape thickness is slightly off 
+   **Solution:** Use overshoot parameter to give more (positive overshoot) or less (negative overshoot) with motor b (giving reel).
 
 ### Rainbow Sections
 **Probable causes:**
