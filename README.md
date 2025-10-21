@@ -7,7 +7,7 @@ It provides three motor-based control programs for tape movement and winding mec
 
 ## Features
 
-- Interactive menu system using force sensor.
+- Interactive menu system using hub buttons or force sensor fallback.
 - Three programmable modes:
   1. Collection Mode — Moves tape segments when a red color is detected. Red colored sticker or similar should be attached to the sample holder at an appropriate position.
   2. Tension Mode — To set initial tape tension at constant speed.
@@ -56,7 +56,7 @@ To run this program on your LEGO PrimeHub, you need to install **Pybricks firmwa
 
 ### 2. Load the Script
 1. In the Pybricks Code editor, create a new project.
-2. Copy and paste the contents of the provided script (`ATUM_tape_collector_control.py`) into the editor. Measure your tape reel diameters (including the tape on the reel) and adjust the variables in script. 
+2. Copy and paste the contents of the provided script (`ATUM_tape_collector_control.py`) into the editor. Measure your tape reel diameters (including the tape on the reel) and adjust the variables in script.
 3. Click the **Run** button to download and execute the program on your hub.
 4. After loading the script to your hub, it will be accessible without connection to your computer.
 
@@ -74,7 +74,7 @@ To run this program on your LEGO PrimeHub, you need to install **Pybricks firmwa
 ## Program Descriptions
 
 ### 1. Collection Program
-- Moves tape a defined distance over a defined period of time whenever red color is detected.
+- Moves tape a defined distance whenever red color is detected.
 - Adjustable parameters for movement time, delay, and overshoot.
 - Displays event count on the hub. Top two rows indicate ones, rows 3 and 4 indicate tens and last rows indicate hundreds.
 
@@ -91,23 +91,45 @@ To run this program on your LEGO PrimeHub, you need to install **Pybricks firmwa
 ## HOW TO OPERATE ATUM
 
 ### Before Starting
-Place a red sticker on the sample holder in a way that it is detected during the cutting movement of the microtome arm. Avoid permanent detection.  
-Eyeball this initially, then start PrimeHub and cycle to **C** and confirm by long press. Let the microtome arm 'cut' and check whether the collector moves the tape after each cut.  
-Appropriate delay depends on the placement of the sticker; appropriate distance and time to run the distance depend on sectioning speed and blockface size.  
-Exit **C (Collection mode)** by restarting the hub.
 
-Measure your tape reel diameters and set them in the software. Standard values might work.  
-If you are not happy with when the collector collects, you can set collection movement distance and delay to better coordinate it with your cutting process.  
-If changes were or have to be made, reupload the changed script to the hub.
+Follow these steps to prepare and start the ATUM system:
 
-Now insert the knife into the system and adjust the tape arm so that it is approximately **1.5 sections (or blockface lengths)** away from the knife edge and fix it in place by tightening the collector arm screw.  
-The arm with tape should be sufficiently submerged into the waterbath but not touch the knife edge or boat.
+1. **Attach the Red Sticker**  
+   Place a red sticker on the sample holder so that it is detected during the cutting movement of the microtome arm.  
+   Avoid permanent detection — the sensor should only briefly detect red during each cutting cycle.
 
-Start PrimeHub by pressing the main button. Once started, cycle through programs to reach **T**.  
-Run the program until the tape is sufficiently taut (should not bend the plastic arm but should also not have visible slack).  
-Exit **T** program by pressing the force sensor. Cycle to **C** and start collection. The counter will count how many sections were collected.
+2. **Test Color Detection and Collection Trigger**  
+   Eyeball the sticker placement, then start the PrimeHub.  
+   Cycle through the menu to **C (Collection Mode)** and confirm by a long press on the force sensor.  
+   Let the microtome arm perform a cut and verify that the collector moves the tape after each cut.  
+   The appropriate **delay** depends on the sticker position; the **distance and time** to run depend on sectioning speed and blockface size.  
+   To exit **C (Collection Mode)**, restart the hub.
+
+3. **Set Reel Parameters**  
+   Measure your tape reel diameters and enter the values in the software. Standard values may already work well.  
+   If you want to change when or how the collector moves, adjust the **collection distance** and **delay** parameters to better coordinate with your cutting process.  
+   After modifying parameters, reupload the updated script to the hub.
+
+4. **Insert the Knife and Adjust the Tape Arm**  
+   Insert the knife into the ultramicrotome system.  
+   Adjust the tape arm so that it is approximately **1.5 sections (or blockface lengths)** away from the knife edge.  
+   Fix the arm in place by tightening the collector arm screw.  
+   The tape should be **submerged in the waterbath** but must **not touch the knife edge or boat**.
+
+5. **Start the PrimeHub and Tension the Tape**  
+   Press the main button on the PrimeHub to start it.  
+   Once the hub boots, cycle through the menu to reach **T (Tension Mode)**.  
+   Run the program until the tape becomes taut — it should not bend the plastic arm but also must not show visible slack.  
+   Stop the **Tension Mode** by pressing the force sensor.
+
+6. **Begin Collection Mode**  
+   Cycle to **C (Collection Mode)** again and start the program.  
+   The display counter will increment with each collected section, allowing you to track progress in real time.
+
 
 ---
+
+### Troubleshooting---
 
 ### Troubleshooting
 
