@@ -10,7 +10,7 @@ It provides three motor-based control programs for tape movement and winding mec
 - Interactive menu system using hub buttons or force sensor fallback.
 - Three programmable modes:
   1. Collection Mode — Moves tape segments when a red color is detected. Red colored sticker or similar should be attached to the sample holder at an appropriate position.
-  2. Tension Mode — Maintains tape tension at constant speed.
+  2. Tension Mode — To set initial tape tension at constant speed.
   3. Rewind Mode — Rewinds tape at controlled speed.
 - Dynamic display icons for C, T, and R menu entries.
 - Smart tape radius estimation based on reel geometry and gear ratios.
