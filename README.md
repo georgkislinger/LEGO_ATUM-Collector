@@ -129,8 +129,6 @@ Follow these steps to prepare and start the ATUM system:
 
 ---
 
-### Troubleshooting---
-
 ### Troubleshooting
 
 #### Rainbow Sections
