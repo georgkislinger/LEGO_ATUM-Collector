@@ -129,19 +129,19 @@ Follow these steps to prepare and start the ATUM system:
 
 ---
 
-### Troubleshooting
+## Troubleshooting
 
-#### Rainbow Sections
+### Rainbow Sections
 **Probable causes:**
 1. Tape runs during the sectioning process and creates water disturbance.  
    **Solution:** Try to add delay to collect between sectioning or decrease/increase collection speed (reduce/increase time used to run tape the set distance) to make motor motion smoother.
 2. Dull knife, too large blockface, collector too close to knife edge, or even touching the boat.
 
-#### Sections Deformed (Squeezed Between Knife Edge and Collector)
+### Sections Deformed (Squeezed Between Knife Edge and Collector)
 **Probable cause:** Too little distance moved per collection event or collection not timed appropriately.  
 **Solution:** Watch closely when the squeeze happens. If it happens during cutting, try to collect *while cutting* (in my test setup, disturbance was minimal).
 
-#### Sections Float Away from Collector Arm
+### Sections Float Away from Collector Arm
 **Solutions:**
 1. Move arm closer to knife edge or center it better.  
 2. Collect with higher tape speed to create more pull in knife boat.  
