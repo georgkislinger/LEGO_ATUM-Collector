@@ -55,7 +55,8 @@ To run this program on your LEGO PrimeHub, you need to install **Pybricks firmwa
    [https://code.pybricks.com](https://code.pybricks.com)
 3. Connect your LEGO PrimeHub via USB to your computer.
 4. In the Pybricks web app, click the **Firmware** tab and follow the on-screen instructions to install the firmware on your hub.
-5. Wait until the installation finishes and your hub restarts.
+5. Wait until the installation finishes and your hub restarts.#
+6. Use a Bluetooth capable PC and connect the Hub via BT.
 
 ### 2. Load the Script
 1. In the Pybricks Code editor, create a new project.
