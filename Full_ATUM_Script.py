@@ -153,10 +153,10 @@ def check_force_exit():
 # === PROGRAM 1: COLLECTION ===
 def run_collection_program():
     # Configuration
-    TAPE_MM = 10
-    MOVE_TIME_MS = 2000
+    TAPE_MM = 7
+    MOVE_TIME_MS = 1000
     MOVE_DELAY_MS = 200
-    GIVING_OVERSHOOT_MM = 0.00
+    GIVING_OVERSHOOT_MM = -2.00
     
     # State
     red_detected = False
